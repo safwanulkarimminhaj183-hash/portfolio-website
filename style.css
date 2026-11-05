@@ -1,0 +1,506 @@
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFF8DC; /* Apnar pochhondo kora cream color eikhane set kora holo */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    color: #111;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0070f3;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+section {
+    padding: 80px 10%;
+    background-color: transparent !important; /* Eti deoyar fole body-r color shob section-e bheshe uthbe */
+}
+
+/* --- 1) Header Section --- */
+header {
+    background-color: #FFFAF0; /* Eikhane #ffffff bad diye #FFFAF0 boshano holo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0070f3;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0070f3;
+}
+
+/* --- 2) Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 140px !important; /* Fixed header thakai header-er pichone jeno text dhaka na pore, tai ektu jaiga barano holo */
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.hero-content .highlight {
+    color: #0070f3;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #0070f3;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #eaeaea;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #d5d5d5;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 5px solid #0070f3;
+}
+
+/* --- 3) About Section --- */
+.about {
+    text-align: center;
+    max-width: 100%;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* --- 4) Skills Section --- */
+.skills {
+    /* Background color transparent rakha hoyeche jeno body-r color pay */
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-box {
+    background: rgba(255, 255, 255, 0.6); /* Creamy background er upor ektu shada vasha vasha thakle sundor lagbe */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #0070f3;
+    border-radius: 5px;
+}
+
+/* --- 5) Projects Section --- */
+.projects {
+    /* Background color shorano holo uniform look er jonno */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #ffffff; /* Project card gulo shada thakle cream-er upor futbe bhalo */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin: 15px 20px 10px;
+    color: #111;
+}
+
+.project-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0 20px 20px;
+    flex-grow: 1;
+}
+
+.project-link {
+    align-self: flex-start;
+    margin-left: 20px;
+    color: #0070f3;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.project-link:hover {
+    border-bottom: 2px solid #0070f3;
+}
+
+/* --- 6) Contact Info Section Styles --- */
+.contact-info-section {
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-card-box {
+    background-color: #ffffff; /* Cream background er upor pure shada card card look */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    text-align: left;
+    min-width: 320px;
+}
+
+.contact-card-box p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-card-box p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-card-box strong {
+    color: #0070f3; /* Accent blue color link dynamic elements highlight korbe */
+    display: inline-block;
+    width: 80px;
+}
+
+.contact-card-box a {
+    color: #111;
+    transition: color 0.3s ease;
+    border-bottom: 1px dashed #0070f3;
+}
+
+.contact-card-box a:hover {
+    color: #0070f3;
+}
+
+/* --- 6) Footer Section --- */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 40px 10%;
+}
+
+footer p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #aaa;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 0.95rem;
+    color: #aaa !important; /* Global layout color overlap thik korar jonne !important add kora holo */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0070f3;
+}
+
+/* ==========================================================================
+   Naya Code: 3-Dots Button Layout & Responsive Mobile Menu System
+   ========================================================================== */
+
+/* Desktop view-te 3-dots toggler automatic hidden thakbe */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #0070f3; /* 3-dots line er professional accent blue color */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Responsive Media Queries (Mobile & Tablet View) --- */
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        display: flex !important;
+        flex-direction: row !important; /* Logo bam-e ebong dots dan-e inline rakhbe */
+        justify-content: space-between !important; /* Button-ke push kore ekdom dan-e thwla dibe */
+        align-items: center !important;
+        padding: 15px 5% !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .logo a {
+        font-size: 1.2rem !important;
+        white-space: nowrap; /* Name jeno grid layout e bhenge nicher line a na jay */
+    }
+
+    /* Mobile view-te 3-dots button-ti active hobe */
+    .menu-toggle {
+        display: flex !important;
+    }
+
+    /* Mobile a nav menu pure vertical dropdown framework e kaj korbe */
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #FFFAF0; /* Header-er backgrounds color matching */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        max-height: 0; /* Prothome collapse/hidden thakbe click na kora porjonto */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* JavaScript trigger hoye class add hole menu smoothly vertical slide-down hobe */
+    nav.menu-active {
+        max-height: 350px; 
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: column !important; /* Uniline bad diye vertically align hobe options gulo */
+        align-items: center;
+        padding: 15px 0 !important;
+        margin: 0 !important;
+        width: 100%;
+        list-style: none;
+        gap: 0 !important;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important; /* Desktop spacing override balance configuration */
+        margin: 0 !important;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 0 !important;
+        font-size: 1rem !important; /* Tap targets friendly click target area height scaling */
+        color: #111;
+        width: 100%;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(0, 112, 243, 0.05); /* Tap response action tracker overlay */
+    }
+
+    /* --- Hero Section Mobile Adjustments --- */
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
